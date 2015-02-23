@@ -1,0 +1,6 @@
+concurso_estaticas_homepage:
+    pattern:  /inicio/
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:index }
+inicio:
+    pattern: /
+    defaults: { _controller: FrameworkBundle:Redirect:redirect,route: concurso_estaticas_homepage, permanent: true }

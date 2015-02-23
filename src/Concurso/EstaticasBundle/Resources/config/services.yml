@@ -1,0 +1,7 @@
+parameters:
+#    concurso_estaticas.example.class: Concurso\EstaticasBundle\Example
+
+services:
+#    concurso_estaticas.example:
+#        class: %concurso_estaticas.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
