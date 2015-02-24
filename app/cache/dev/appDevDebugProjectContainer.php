@@ -25,7 +25,7 @@ class appDevDebugProjectContainer extends Container
     public function __construct()
     {
         $dir = __DIR__;
-        for ($i = 1; $i <= 5; ++$i) {
+        for ($i = 1; $i <= 4; ++$i) {
             $this->targetDirs[$i] = $dir = dirname($dir);
         }
         $this->parameters = $this->getDefaultParameters();
@@ -610,13 +610,13 @@ class appDevDebugProjectContainer extends Container
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
         $a = new \Doctrine\Common\Cache\ArrayCache();
-        $a->setNamespace('sf2orm_default_386bfe7f4390d299bc4e9202ea9a03e2dad70223ab7d03235df4f974fa286a74');
+        $a->setNamespace('sf2orm_default_b593a9b094c9ce5a94fdd2a65f3422207044c56ac07f1de2691d948d5a3a11bf');
 
         $b = new \Doctrine\Common\Cache\ArrayCache();
-        $b->setNamespace('sf2orm_default_386bfe7f4390d299bc4e9202ea9a03e2dad70223ab7d03235df4f974fa286a74');
+        $b->setNamespace('sf2orm_default_b593a9b094c9ce5a94fdd2a65f3422207044c56ac07f1de2691d948d5a3a11bf');
 
         $c = new \Doctrine\Common\Cache\ArrayCache();
-        $c->setNamespace('sf2orm_default_386bfe7f4390d299bc4e9202ea9a03e2dad70223ab7d03235df4f974fa286a74');
+        $c->setNamespace('sf2orm_default_b593a9b094c9ce5a94fdd2a65f3422207044c56ac07f1de2691d948d5a3a11bf');
 
         $d = new \Doctrine\ORM\Mapping\Driver\DriverChain();
         $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => ($this->targetDirs[3].'/src/Concurso/RegistroBundle/Entity'))), 'Concurso\\RegistroBundle\\Entity');
@@ -3564,7 +3564,7 @@ class appDevDebugProjectContainer extends Container
             'kernel.root_dir' => $this->targetDirs[2],
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
-            'kernel.name' => 'app',
+            'kernel.name' => 'ap_',
             'kernel.cache_dir' => __DIR__,
             'kernel.logs_dir' => ($this->targetDirs[2].'/logs'),
             'kernel.bundles' => array(

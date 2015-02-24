@@ -7,7 +7,15 @@ class __TwigTemplate_cd8611b44d9524eda86197c2c36bf3a233ea35c05295ce1c420add299a8
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("TwigBundle::layout.html.twig");
+        // line 1
+        try {
+            $this->parent = $this->env->loadTemplate("TwigBundle::layout.html.twig");
+        } catch (Twig_Error_Loader $e) {
+            $e->setTemplateFile($this->getTemplateName());
+            $e->setTemplateLine(1);
+
+            throw $e;
+        }
 
         $this->blocks = array(
             'head' => array($this, 'block_head'),
@@ -31,7 +39,7 @@ class __TwigTemplate_cd8611b44d9524eda86197c2c36bf3a233ea35c05295ce1c420add299a8
     {
         // line 4
         echo "    <link href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/css/exception.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/css/exception.css", null, true), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
 ";
     }
@@ -41,7 +49,7 @@ class __TwigTemplate_cd8611b44d9524eda86197c2c36bf3a233ea35c05295ce1c420add299a8
     {
         // line 8
         echo "    ";
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")), "message"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")), "message", array()), "html", null, true);
         echo " (";
         echo twig_escape_filter($this->env, (isset($context["status_code"]) ? $context["status_code"] : $this->getContext($context, "status_code")), "html", null, true);
         echo " ";
@@ -70,6 +78,6 @@ class __TwigTemplate_cd8611b44d9524eda86197c2c36bf3a233ea35c05295ce1c420add299a8
 
     public function getDebugInfo()
     {
-        return array (  57 => 12,  54 => 11,  43 => 8,  40 => 7,  33 => 4,  30 => 3,  163 => 8,  157 => 5,  80 => 26,  76 => 25,  72 => 24,  68 => 23,  64 => 22,  60 => 21,  50 => 14,  41 => 9,  39 => 8,  35 => 7,  31 => 6,  27 => 5,  21 => 1,);
+        return array (  65 => 12,  62 => 11,  51 => 8,  48 => 7,  41 => 4,  38 => 3,  11 => 1,);
     }
 }
