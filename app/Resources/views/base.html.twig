@@ -3,11 +3,47 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('caii.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/concursoestaticas/css/foundation.css') }}" />
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    <body >
+        <div class="row">
+             <div class="large-12 columns">
+                <img src="{{ asset('banner_oficial.jpg')}}">
+             </div>
+        </div>
+        <div class="row">
+
+        <div class="large-12 columns">
+          <ul class="button-group left">
+            <li><a href="{{ path('inicio') }}" class="button">Inicio</a></li>
+            <li><a href="{{ path('convocatoria') }}" class="button">Convocatoria</a></li>
+            <li><a href="{{ path('programa') }}" class="button">Programa</a></li>
+            <li><a href="{{ path('ejemplos') }}" class="button">Ejemplos</a></li>
+            <li><a href="{{ path('registro') }}" class="button">Registro</a></li>
+            <li><a href="{{ path('contactos') }}" class="button">Contactos</a></li>
+          </ul>
+        </div>
+      </div>
+      {% block content %}
+
+      {% endblock %}
+
+      <footer class="row" >
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-5 columns">
+              <p>© Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="large-7 columns">
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+    
     </body>
 </html>

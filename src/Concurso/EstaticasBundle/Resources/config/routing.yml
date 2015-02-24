@@ -4,3 +4,18 @@ concurso_estaticas_homepage:
 inicio:
     pattern: /
     defaults: { _controller: FrameworkBundle:Redirect:redirect,route: concurso_estaticas_homepage, permanent: true }
+convocatoria:
+    pattern:  /convocatoria/
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:convocatoria }
+programa:
+    pattern:  /programa/
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:programa }
+ejemplos:
+    pattern:  /ejemplos/
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:ejemplos }
+registro:
+    pattern:  /registro/
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:registro }
+contactos:
+    pattern:  /contactos/
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:contactos }

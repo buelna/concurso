@@ -153,6 +153,51 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController::redirectAction',  'route' => 'concurso_estaticas_homepage',  'permanent' => true,  '_route' => 'inicio',);
         }
 
+        // convocatoria
+        if (rtrim($pathinfo, '/') === '/convocatoria') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'convocatoria');
+            }
+
+            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::convocatoriaAction',  '_route' => 'convocatoria',);
+        }
+
+        // programa
+        if (rtrim($pathinfo, '/') === '/programa') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'programa');
+            }
+
+            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::programaAction',  '_route' => 'programa',);
+        }
+
+        // ejemplos
+        if (rtrim($pathinfo, '/') === '/ejemplos') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'ejemplos');
+            }
+
+            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::ejemplosAction',  '_route' => 'ejemplos',);
+        }
+
+        // registro
+        if (rtrim($pathinfo, '/') === '/registro') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'registro');
+            }
+
+            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::registroAction',  '_route' => 'registro',);
+        }
+
+        // contactos
+        if (rtrim($pathinfo, '/') === '/contactos') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'contactos');
+            }
+
+            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::contactosAction',  '_route' => 'contactos',);
+        }
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
