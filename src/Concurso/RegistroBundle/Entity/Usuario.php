@@ -41,6 +41,13 @@ class Usuario
      */
     private $password;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=80)
+     */
+    private $nombre;
+
 
     /**
      * Get id
@@ -96,5 +103,28 @@ class Usuario
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Usuario
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
     }
 }
