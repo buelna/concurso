@@ -1,3 +1,7 @@
+registro:
+    resource: "@RegistroBundle/Resources/config/routing.yml"
+    prefix:   /
+
 concurso_estaticas:
     resource: "@ConcursoEstaticasBundle/Resources/config/routing.yml"
     prefix:   /
