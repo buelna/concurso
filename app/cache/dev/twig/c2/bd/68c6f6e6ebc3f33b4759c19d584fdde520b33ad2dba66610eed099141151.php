@@ -18,6 +18,7 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
         }
 
         $this->blocks = array(
+            'content' => array($this, 'block_content'),
         );
     }
 
@@ -29,6 +30,19 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
     protected function doDisplay(array $context, array $blocks = array())
     {
         $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 2
+    public function block_content($context, array $blocks = array())
+    {
+        // line 3
+        echo "\t<div class=\"row\">
+\t\t<div class=\"large-12 columns\" align=\"center\">
+\t\t\t<h1> En construcción...</h1>
+\t\t\t<hr>
+\t\t</div>
+\t</div>
+";
     }
 
     public function getTemplateName()
@@ -43,6 +57,6 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
 
     public function getDebugInfo()
     {
-        return array (  11 => 1,);
+        return array (  39 => 3,  36 => 2,  11 => 1,);
     }
 }
