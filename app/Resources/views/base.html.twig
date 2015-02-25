@@ -5,6 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('caii.ico') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/concursoestaticas/css/foundation.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/concursoestaticas/css/footerStyle.css') }}" />
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -27,11 +28,13 @@
           </ul>
         </div>
       </div>
+      <div class="page-wrap">
       {% block content %}
-
+       </div>
+       
       {% endblock %}
 
-      <footer class="row" >
+      <footer class="site-footer" >
         <div class="large-12 columns">
           <hr/>
           <div class="row">

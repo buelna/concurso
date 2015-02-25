@@ -122,9 +122,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // registro_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'registro_homepage')), array (  '_controller' => 'Concurso\\RegistroBundle\\Controller\\DefaultController::indexAction',));
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // usuario_login
+                if ($pathinfo === '/login') {
+                    return array (  '_controller' => 'Concurso\\RegistroBundle\\Controller\\UsuarioController::loginAction',  '_route' => 'usuario_login',);
+                }
+
+                // usuario_login_check
+                if ($pathinfo === '/login_check') {
+                    return array('_route' => 'usuario_login_check');
+                }
+
+            }
+
+            // usuario_logout
+            if ($pathinfo === '/logout') {
+                return array('_route' => 'usuario_logout');
+            }
+
         }
 
         // concurso_estaticas_homepage

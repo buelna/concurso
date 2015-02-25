@@ -2,6 +2,7 @@
 
 namespace Concurso\RegistroBundle\Entity;
 
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
@@ -16,8 +17,34 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *     message="Este usuario ya se encuentra registrado"
  * )
  */
-class Usuario
+class Usuario implements UserInterface
 {
+
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function eraseCredentials()
+    {
+    }
+
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function getRoles()
+    {
+        return array('ROLE_USUARIO');
+    }
+
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function getUsername()
+    {
+        return $this->getEmail();
+    }
+
+
+
     /**
      * @var integer
      *
@@ -47,6 +74,13 @@ class Usuario
      * @ORM\Column(name="nombre", type="string", length=80)
      */
     private $nombre;
+
+    /**
+     * @var string salt
+     *
+     * @ORM\Column(name="salt", type="string", length=255)
+     */
+    protected $salt;
 
 
     /**
@@ -126,5 +160,25 @@ class Usuario
     public function getNombre()
     {
         return $this->nombre;
+    }
+
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+    }
+
+    /**
+     * Get salt
+     *
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->salt;
     }
 }
