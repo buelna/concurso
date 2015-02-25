@@ -2,36 +2,49 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" type="image/x-icon" href="{{ asset('caii.ico') }}" />
+        <title>{% block title %}Bienvenido!{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('bundles/concursoestaticas/css/foundation.css') }}" />
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body >
-        <div class="row">
-             <div class="large-12 columns">
-                <img src="{{ asset('banner_oficial.jpg')}}">
-             </div>
-        </div>
-        <div class="row">
+      <div class="page-wrap">
+          <div class="row">
+               <div class="large-12 columns">
+                  <img src="{{ asset('banner_oficial.jpg')}}">
+               </div>
+          </div>
+          <div class="row">
 
-        <div class="large-12 columns">
-          <ul class="button-group left">
-            <li><a href="{{ path('inicio') }}" class="button">Inicio</a></li>
-            <li><a href="{{ path('convocatoria') }}" class="button">Convocatoria</a></li>
-            <li><a href="{{ path('programa') }}" class="button">Programa</a></li>
-            <li><a href="{{ path('ejemplos') }}" class="button">Ejemplos</a></li>
-            <li><a href="{{ path('registro') }}" class="button">Registro</a></li>
-            <li><a href="{{ path('contactos') }}" class="button">Contactos</a></li>
-          </ul>
+          <div class="large-12 columns">
+            <div class="contain-to-grid">
+              <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+                  <li class="name">
+                    <h1><a href=""></a></h1>
+                  </li>
+                  <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+                </ul>
+                <section class="top-bar-section">
+                  <ul class="left">
+                    <li><a href="{{ path('inicio') }}">Inicio</a></li>
+                    <li><a href="{{ path('convocatoria')}}">Convocatoria</a></li>
+                    <li><a href="{{ path('programa') }}">Programa</a></li>
+                    <li><a href="{{ path('ejemplos') }}">Ejemplos</a></li>
+                    <li><a href="{{ path('registro') }}">Registro</a></li>
+                    <li><a href="{{ path('contactos') }}">Contactos</a></li>
+                    <li><a href="" class="button">Login</a></li>
+                  </ul>
+                </section>
+              </nav>
+            </div>
+          </div>
         </div>
+        {% block content %}
+
+        {% endblock %}
       </div>
-      {% block content %}
-
-      {% endblock %}
-
-      <footer class="row" >
+      <footer class="site-footer" >
         <div class="large-12 columns">
           <hr/>
           <div class="row">
@@ -44,6 +57,15 @@
           </div>
         </div>
       </footer>
-    
+  <script src="{{asset('bundles/concursoestaticas/js/foundation.min.js')}}"></script>
+  <script src="{{asset('bundles/concursoestaticas/js/foundation/foundation.js')}}"></script>
+  <script src="{{asset('bundles/concursoestaticas/js/foundation/foundation.dropdown.js')}}"></script>
+  <script src="{{asset('bundles/concursoestaticas/js/foundation/foundation.tab.js')}}"></script>
+  <script src="{{asset('bundles/concursoestaticas/js/vendor/jquery.js')}}"></script>
+  <script src="{{asset('bundles/concursoestaticas/js/foundation/foundation.js')}}"></script>
+  <script src="{{asset('bundles/concursoestaticas/js/foundation/foundation.topbar.js')}}"></script>
+  <script>
+    $(document).foundation();
+  </script>
     </body>
 </html>
