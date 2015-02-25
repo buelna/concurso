@@ -30,4 +30,8 @@ class EstaticasController extends Controller
     {
         return $this->render('ConcursoEstaticasBundle:Default:contactos.html.twig', array());
     }
+    public function loginAction()
+    {
+        return $this->render('ConcursoEstaticasBundle:Default:login.html.twig', array());
+    }
 }

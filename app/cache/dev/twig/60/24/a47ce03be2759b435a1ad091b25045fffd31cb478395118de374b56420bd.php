@@ -81,12 +81,15 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
                     <li><a href=\"";
         // line 34
         echo $this->env->getExtension('routing')->getPath("registro");
-        echo "\">Registro</a></li>
+        echo "\">Pre-Registro</a></li>
                     <li><a href=\"";
         // line 35
         echo $this->env->getExtension('routing')->getPath("contactos");
         echo "\">Contactos</a></li>
-                    <li><a href=\"\" class=\"button\">Login</a></li>
+                    <li><a href=\"";
+        // line 36
+        echo $this->env->getExtension('routing')->getPath("login");
+        echo "\" class=\"button\">Login</a></li>
                   </ul>
                 </section>
               </nav>
@@ -178,6 +181,6 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
 
     public function getDebugInfo()
     {
-        return array (  165 => 44,  162 => 43,  157 => 7,  151 => 5,  140 => 66,  136 => 65,  132 => 64,  128 => 63,  124 => 62,  120 => 61,  116 => 60,  100 => 46,  98 => 43,  87 => 35,  83 => 34,  79 => 33,  75 => 32,  71 => 31,  67 => 30,  48 => 14,  38 => 8,  36 => 7,  32 => 6,  28 => 5,  22 => 1,);
+        return array (  168 => 44,  165 => 43,  160 => 7,  154 => 5,  143 => 66,  139 => 65,  135 => 64,  131 => 63,  127 => 62,  123 => 61,  119 => 60,  103 => 46,  101 => 43,  91 => 36,  87 => 35,  83 => 34,  79 => 33,  75 => 32,  71 => 31,  67 => 30,  48 => 14,  38 => 8,  36 => 7,  32 => 6,  28 => 5,  22 => 1,);
     }
 }

@@ -19,3 +19,6 @@ registro:
 contactos:
     pattern:  /contactos/
     defaults: { _controller: ConcursoEstaticasBundle:Estaticas:contactos }
+login:
+    pattern:  /login/
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:login }

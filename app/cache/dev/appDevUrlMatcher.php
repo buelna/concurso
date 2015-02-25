@@ -190,6 +190,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::contactosAction',  '_route' => 'contactos',);
         }
 
+        // login
+        if (rtrim($pathinfo, '/') === '/login') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'login');
+            }
+
+            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::loginAction',  '_route' => 'login',);
+        }
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
