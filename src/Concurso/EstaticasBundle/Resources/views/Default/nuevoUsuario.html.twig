@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+{% block content %}
+	<div class="row">
+		<div class="large-12 columns" align="center">
+			<div class="large-6 columns">
+				</br>
+				<h1>Registro</h1>
+				{{ form_start(form, { 'action': path('usuario_new'), 'method': 'POST' }) }} 
+                    	{{ form_label(form.nombre, 'Nombre') }}
+                        {{ form_widget(form.nombre) }}
+                        {{ form_label(form.email, 'Email') }}
+                        {{ form_widget(form.email) }}
+                        {{ form_label(form.password, 'Contraseña') }}
+                        {{ form_widget(form.password) }}
+                        <br>
+                        <input type="submit" value="Save" >
+                         <br>
+                {{ form_end(form) }}
+			</div>
+			
+
+			<hr>
+		</div>
+	</div>
+{% endblock %}

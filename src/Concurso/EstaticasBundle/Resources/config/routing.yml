@@ -13,12 +13,21 @@ programa:
 ejemplos:
     pattern:  /ejemplos/
     defaults: { _controller: ConcursoEstaticasBundle:Estaticas:ejemplos }
+
 registro:
-    pattern:  /registro/
+    pattern:  /registro
     defaults: { _controller: ConcursoEstaticasBundle:Estaticas:registro }
 contactos:
     pattern:  /contactos/
     defaults: { _controller: ConcursoEstaticasBundle:Estaticas:contactos }
 login:
     pattern:  /login/
-    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:login }
+    defaults: { _controller: RegistroBundle:Usuario:login }
+login_check:
+    pattern:  /login_check
+logout:
+    pattern:  /logout
+
+usuario_new:
+    pattern:  /usuarioNuevo
+    defaults: { _controller: RegistroBundle:Usuario:new }

@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Bienvenido!{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('bundles/concursoestaticas/css/foundation.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/concursoestaticas/css/footerStyle.css') }}" />
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -41,20 +40,10 @@
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-      <div class="page-wrap">
-      {% block content %}
-       </div>
-       
-      {% endblock %}
-
-=======
         {% block content %}
 
         {% endblock %}
       </div>
->>>>>>> upstream/master
       <footer class="site-footer" >
         <div class="large-12 columns">
           <hr/>

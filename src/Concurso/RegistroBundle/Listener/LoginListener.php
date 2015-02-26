@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class LoginListener
 {
-    private $contexto, $router;
+    /*private $contexto, $router;
 
     public function __construct(Router $router)
     {
@@ -35,5 +35,5 @@ class LoginListener
             $event->setResponse(new RedirectResponse($portada));
             $event->stopPropagation();
         
-    }
+    }*/
 }

@@ -18,6 +18,7 @@ class __TwigTemplate_1e07b58c6643cf60cb848f4134d785c11d64d87faebce96aa97ef4633db
         }
 
         $this->blocks = array(
+            'content' => array($this, 'block_content'),
         );
     }
 
@@ -29,6 +30,34 @@ class __TwigTemplate_1e07b58c6643cf60cb848f4134d785c11d64d87faebce96aa97ef4633db
     protected function doDisplay(array $context, array $blocks = array())
     {
         $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 2
+    public function block_content($context, array $blocks = array())
+    {
+        // line 3
+        echo "\t<div class=\"row\">
+\t\t<div class=\"large-12 columns\" align=\"center\">
+\t\t\t<h1> En construcción...</h1>
+\t\t\tDatos de usuario:</br>
+\t\t\tNombre: ";
+        // line 7
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["usuario"]) ? $context["usuario"] : $this->getContext($context, "usuario")), "nombre", array()), "html", null, true);
+        echo "</br>
+\t\t\tNombre: ";
+        // line 8
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["usuario"]) ? $context["usuario"] : $this->getContext($context, "usuario")), "email", array()), "html", null, true);
+        echo "
+\t\t\t<div>
+\t\t\t    <a href=\"";
+        // line 10
+        echo $this->env->getExtension('routing')->getPath("logout");
+        echo "\">Logout</a>
+\t\t\t</div>
+\t\t\t<hr>
+\t\t</div>
+\t</div>
+";
     }
 
     public function getTemplateName()
@@ -43,6 +72,6 @@ class __TwigTemplate_1e07b58c6643cf60cb848f4134d785c11d64d87faebce96aa97ef4633db
 
     public function getDebugInfo()
     {
-        return array (  11 => 1,);
+        return array (  54 => 10,  49 => 8,  45 => 7,  39 => 3,  36 => 2,  11 => 1,);
     }
 }

@@ -36,18 +36,12 @@ class __TwigTemplate_6ca70506bed454c1d5d198504e1781202621d705e4ca4f430d8e18169d2
     public function block_content($context, array $blocks = array())
     {
         // line 3
-        echo "<div class=\"page-wrap\">
-\t<div class=\"row\" >
-\t  <div class=\"small-3 small-centered columns\">
-\t  \t<div class=\"row\">
-\t  \t\tcontacto 1 
-\t  \t</div>
-\t  \t<div class=\"row\">
-\t  \t\tcontacto 2
-\t  \t</div>
-\t  </div>
+        echo "\t<div class=\"row\">
+\t\t<div class=\"large-12 columns\" align=\"center\">
+\t\t\t<h1> En construcción...</h1>
+\t\t\t<hr>
+\t\t</div>
 \t</div>
-</div>\t
 ";
     }
 

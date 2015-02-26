@@ -37,44 +37,31 @@ class __TwigTemplate_cbfd7787872197caa45deba326f37f706dea98eef24528279e18c6f8e0f
     {
         // line 3
         echo "      <div class=\"row\">
-        <div class=\"large-12 columns\">
-          <img src=\"http://placehold.it/1000x400&text=[img]\">
-     
+        <div class=\"large-12 columns\" align=\"center\">
+          <img src=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("banner_concurso2015.jpg"), "html", null, true);
+        echo "\">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
           <hr>
         </div>
       </div>
       <div class=\"row\">
-
         <div class=\"large-4 columns\">
-          <img src=\"http://placehold.it/400x300&text=[img]\">
+         
         </div>
         <div class=\"large-8 columns\">
-          <h4>This is a content section.</h4>
-          <div class=\"row\">
-            <div class=\"large-6 columns\">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-            </div>
-            <div class=\"large-6 columns\">
-              <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-            </div>
-          </div>
         </div>
       </div>
-     
-     
-       
-     
       <div class=\"row\">
         <div class=\"large-8 columns\">
-          <h4>This is a content section.</h4>
-     
-          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-     
-          <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
+         
         </div>
         <div class=\"large-4 columns\">
-          <img src=\"http://placehold.it/400x300&text=[img]\">
+          
         </div>
       </div>
     
@@ -94,6 +81,6 @@ class __TwigTemplate_cbfd7787872197caa45deba326f37f706dea98eef24528279e18c6f8e0f
 
     public function getDebugInfo()
     {
-        return array (  39 => 3,  36 => 2,  11 => 1,);
+        return array (  43 => 5,  39 => 3,  36 => 2,  11 => 1,);
     }
 }

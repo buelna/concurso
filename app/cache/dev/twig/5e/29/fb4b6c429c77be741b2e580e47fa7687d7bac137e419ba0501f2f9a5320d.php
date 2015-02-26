@@ -39,10 +39,10 @@ class __TwigTemplate_5e29fb4b6c429c77be741b2e580e47fa7687d7bac137e419ba0501f2f9a
         echo "\t<div class=\"row\" >
 \t  <div class=\"small-3 small-centered columns\">
 \t  \t<div class=\"row\">
-\t  \t\tcontacto 1 
+\t  \t\t<h1>contacto 1</h1> 
 \t  \t</div>
 \t  \t<div class=\"row\">
-\t  \t\tcontacto 2
+\t  \t\t<h1>contacto 2</h1>
 \t  \t</div>
 \t  </div>
 \t</div>
