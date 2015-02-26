@@ -52,7 +52,7 @@ class UsuarioController extends Controller
         $usuario = new Usuario();
         
         $formulario = $this->createForm(new UsuarioType(), $usuario);
-
+        $formulario->add('captcha', 'captcha');
         $formulario->handleRequest($peticion);
 
         if ($formulario->isValid()) {
@@ -73,7 +73,6 @@ class UsuarioController extends Controller
 
             return $this->redirect($this->generateUrl('registro', array()));
         }
-
         return $this->render('ConcursoEstaticasBundle:Default:nuevoUsuario.html.twig', array(
             'form' => $formulario->createView()
         ));
