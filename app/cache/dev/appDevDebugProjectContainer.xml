@@ -1762,7 +1762,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>54ef7fee1bdf8</argument>
+            <argument>54ef85a712816</argument>
           </service>
         </argument>
       </argument>
@@ -2016,7 +2016,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>54ef7fee1bdf8</argument>
+            <argument>54ef85a712816</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2247,10 +2247,6 @@
       <call method="addGlobal">
         <argument>app</argument>
         <argument type="service" id="templating.globals"/>
-      </call>
-      <call method="addGlobal">
-        <argument>usuarioG</argument>
-        <argument></argument>
       </call>
     </service>
     <service id="twig.translation.extractor" class="Symfony\Bridge\Twig\Translation\TwigExtractor">

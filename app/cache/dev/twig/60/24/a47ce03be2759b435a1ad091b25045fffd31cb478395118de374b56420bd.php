@@ -106,7 +106,7 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
           <hr/>
           <div class=\"row\">
             <div class=\"large-5 columns\">
-              <p>© Copyright no one at all. Go to town.</p>
+              <p>© Copyright.</p>
             </div>
             <div class=\"large-7 columns\">
               

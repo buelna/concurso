@@ -38,30 +38,42 @@ class __TwigTemplate_82111dbe89902123782c73c726dfcc3c200146eee03dfe1f23ff7b7d0e7
         // line 3
         echo "      <div class=\"row\">
         <div class=\"large-12 columns\" align=\"center\">
-          <img src=\"";
-        // line 5
+          <br/>
+          <img align=\"center\" height=\"75%\" width=\"75%\" src=\"";
+        // line 6
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("banner_concurso2015.jpg"), "html", null, true);
         echo "\">
-          <br/>
-          <br/>
-          <br/>
-          <br/>
           <hr>
         </div>
       </div>
       <div class=\"row\">
-        <div class=\"large-4 columns\">
-         
-        </div>
-        <div class=\"large-8 columns\">
+        <div class=\"large-12 columns\">
+            <strong>¿Quiénes pueden participar?</strong><br/>
+            <p>Estudiantes que cursen el sexto semestre de bachillerato y que no tengan materias reprobadas.</p>
         </div>
       </div>
       <div class=\"row\">
-        <div class=\"large-8 columns\">
-         
+        <div class=\"large-12 columns\">
+            <strong>¿En qué consiste? </strong><br/>
+            <p>Resolver problemas mediante algún lenguaje de programación.</p>
         </div>
-        <div class=\"large-4 columns\">
-          
+      </div>
+      <div class=\"row\">
+        <div class=\"large-12 columns\">
+            <strong>¿Cuándo se llevara a cabo?</strong><br/>
+            <p>El viernes 17 de Abril del 2015.</p>
+        </div>
+      </div>
+      <div class=\"row\">
+        <div class=\"large-12 columns\">
+            <strong>¿En dónde?</strong><br/>
+            <p>En las instalaciones del Instituto Tecnológico de Mexicali.</p>
+        </div>
+      </div>
+      <div class=\"row\">
+        <div class=\"large-12 columns\">
+            <strong>¿Cuáles son los premios?</strong><br/>
+            <p>Una tableta a cada integrante del equipo ganador del primer lugar. Beca para estudiar en el ITM a los integrantes de los equipos ganadores de los primeros cinco lugares.</p>
         </div>
       </div>
     
@@ -81,6 +93,6 @@ class __TwigTemplate_82111dbe89902123782c73c726dfcc3c200146eee03dfe1f23ff7b7d0e7
 
     public function getDebugInfo()
     {
-        return array (  43 => 5,  39 => 3,  36 => 2,  11 => 1,);
+        return array (  44 => 6,  39 => 3,  36 => 2,  11 => 1,);
     }
 }
