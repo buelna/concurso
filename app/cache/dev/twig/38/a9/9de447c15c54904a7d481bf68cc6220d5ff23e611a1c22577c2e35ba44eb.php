@@ -71,10 +71,20 @@ class __TwigTemplate_38a99de447c15c54904a7d481bf68cc6220d5ff23e611a1c22577c2e35b
 \t\t\t\t</form>
 \t\t\t</div>
 \t\t\t<div class=\"large-6 columns\" align=\"center\">
-\t\t\t\t<a href=\"";
-        // line 25
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<br/>
+\t\t\t\t\t<img align=\"center\" height=\"75%\" width=\"75%\" src=\"";
+        // line 27
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("banner_concurso2015.jpg"), "html", null, true);
+        echo "\">
+\t\t          <hr>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<a href=\"";
+        // line 31
         echo $this->env->getExtension('routing')->getPath("usuario_new");
         echo "\" class=\"button expand\">Registrate</a>
+\t\t\t\t</div>
 \t\t\t</div>
 
 \t\t\t<hr>
@@ -95,6 +105,6 @@ class __TwigTemplate_38a99de447c15c54904a7d481bf68cc6220d5ff23e611a1c22577c2e35b
 
     public function getDebugInfo()
     {
-        return array (  76 => 25,  62 => 14,  57 => 12,  54 => 11,  48 => 9,  46 => 8,  39 => 3,  36 => 2,  11 => 1,);
+        return array (  85 => 31,  78 => 27,  62 => 14,  57 => 12,  54 => 11,  48 => 9,  46 => 8,  39 => 3,  36 => 2,  11 => 1,);
     }
 }
