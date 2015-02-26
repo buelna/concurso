@@ -5,4 +5,5 @@ registro:
 concurso_estaticas:
     resource: "@ConcursoEstaticasBundle/Resources/config/routing.yml"
     prefix:   /
+    
 

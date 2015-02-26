@@ -2,24 +2,46 @@
 
 namespace Concurso\RegistroBundle\Entity;
 
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints as DoctrineAssert;
 
 /**
  * Usuario
  *
  * @ORM\Table()
  * @ORM\Entity
- * @UniqueEntity(
- *     fields={"email"},
- *     errorPath="email",
- *     message="Este usuario ya se encuentra registrado"
- * )
  */
-class Usuario
-{
+
+class Usuario implements UserInterface {
+
     /**
-     * @var integer
+     * Método requerido por la interfaz UserInterface
+     */
+    public function eraseCredentials()
+    {
+    }
+
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function getUsername()
+    {
+        return $this->getEmail();
+    }
+
+    /**
+     * @var integer $id
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -28,31 +50,56 @@ class Usuario
     private $id;
 
     /**
-     * @var string
+     * @var string $nombre
      *
-     * @ORM\Column(name="email", type="string", length=45)
+     * @ORM\Column(name="nombre", type="string", length=100)
+     * @Assert\NotBlank()
+     */
+    private $nombre;
+
+    /**
+     * @var string $email
+     *
+     * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @Assert\Email()
      */
     private $email;
 
     /**
-     * @var string
+     * @var string $password
      *
-     * @ORM\Column(name="password", type="string", length=45)
+     * @ORM\Column(name="password", type="string", length=255)
+     * @Assert\NotBlank(groups={"registro"})
+     * @Assert\Length(min = 6)
      */
     private $password;
 
     /**
-     * @var string
+     * @var string salt
      *
-     * @ORM\Column(name="nombre", type="string", length=80)
+     * @ORM\Column(name="salt", type="string", length=255)
      */
-    private $nombre;
+    protected $salt;
 
+    public function __construct()
+    {
+        
+    }
 
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
+
+    public function __sleep(){
+        return array('id', 'nombre', 'email');
+    }
+
+    
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -60,22 +107,39 @@ class Usuario
     }
 
     /**
+     * Set nombre
+     *
+     * @param string $nombre
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
      * Set email
      *
      * @param string $email
-     * @return Usuario
      */
     public function setEmail($email)
     {
         $this->email = $email;
-
-        return $this;
     }
 
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {
@@ -86,19 +150,16 @@ class Usuario
      * Set password
      *
      * @param string $password
-     * @return Usuario
      */
     public function setPassword($password)
     {
         $this->password = $password;
-
-        return $this;
     }
 
     /**
      * Get password
      *
-     * @return string 
+     * @return string
      */
     public function getPassword()
     {
@@ -106,25 +167,24 @@ class Usuario
     }
 
     /**
-     * Set nombre
+     * Set salt
      *
-     * @param string $nombre
-     * @return Usuario
+     * @param string $salt
      */
-    public function setNombre($nombre)
+    public function setSalt($salt)
     {
-        $this->nombre = $nombre;
-
-        return $this;
+        $this->salt = $salt;
     }
 
     /**
-     * Get nombre
+     * Get salt
      *
-     * @return string 
+     * @return string
      */
-    public function getNombre()
+    public function getSalt()
     {
-        return $this->nombre;
+        return $this->salt;
     }
+
+   
 }
