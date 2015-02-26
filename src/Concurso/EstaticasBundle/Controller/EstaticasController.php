@@ -3,6 +3,7 @@
 namespace Concurso\EstaticasBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class EstaticasController extends Controller
 {
@@ -22,16 +23,16 @@ class EstaticasController extends Controller
     {
         return $this->render('ConcursoEstaticasBundle:Default:ejemplos.html.twig', array());
     }
-    public function registroAction()
+    public function registroAction(Request $peticion)
     {
-        return $this->render('ConcursoEstaticasBundle:Default:registro.html.twig', array());
+        $usuario = $this->get('security.context')->getToken()->getUser();
+        return $this->render('ConcursoEstaticasBundle:Default:registro.html.twig', array(
+                'usuario' => $usuario
+            ));
     }
     public function contactosAction()
     {
         return $this->render('ConcursoEstaticasBundle:Default:contactos.html.twig', array());
     }
-    public function loginAction()
-    {
-        return $this->render('ConcursoEstaticasBundle:Default:login.html.twig', array());
-    }
+    
 }

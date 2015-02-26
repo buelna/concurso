@@ -122,11 +122,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // registro_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'registro_homepage')), array (  '_controller' => 'Concurso\\RegistroBundle\\Controller\\DefaultController::indexAction',));
-        }
-
         // concurso_estaticas_homepage
         if (rtrim($pathinfo, '/') === '/inicio') {
             if (substr($pathinfo, -1) !== '/') {
@@ -173,11 +168,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // registro
-        if (rtrim($pathinfo, '/') === '/registro') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'registro');
-            }
-
+        if ($pathinfo === '/registro') {
             return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::registroAction',  '_route' => 'registro',);
         }
 
@@ -190,13 +181,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::contactosAction',  '_route' => 'contactos',);
         }
 
-        // login
-        if (rtrim($pathinfo, '/') === '/login') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'login');
-            }
-
-            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::loginAction',  '_route' => 'login',);
+        // usuario_new
+        if ($pathinfo === '/usuarioNuevo') {
+            return array (  '_controller' => 'Concurso\\RegistroBundle\\Controller\\UsuarioController::newAction',  '_route' => 'usuario_new',);
         }
 
         // _welcome
@@ -268,6 +255,31 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // _demo_contact
             if ($pathinfo === '/demo/contact') {
                 return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::contactAction',  '_route' => '_demo_contact',);
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // login
+                if (rtrim($pathinfo, '/') === '/login') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'login');
+                    }
+
+                    return array (  '_controller' => 'Concurso\\RegistroBundle\\Controller\\UsuarioController::loginAction',  '_route' => 'login',);
+                }
+
+                // login_check
+                if ($pathinfo === '/login_check') {
+                    return array('_route' => 'login_check');
+                }
+
+            }
+
+            // logout
+            if ($pathinfo === '/logout') {
+                return array('_route' => 'logout');
             }
 
         }
