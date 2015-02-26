@@ -80,6 +80,7 @@
   'ConcursoEstaticasBundle:Default:contactos.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/contactos.html.twig',
   'ConcursoEstaticasBundle:Default:ejemplos.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/ejemplos.html.twig',
   'ConcursoEstaticasBundle:Default:convocatoria.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/convocatoria.html.twig',
+  'ConcursoEstaticasBundle:Default:login.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/login.html.twig',
   'ConcursoEstaticasBundle:Default:registro.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/registro.html.twig',
   'ConcursoEstaticasBundle:Default:index.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/index.html.twig',
   'ConcursoEstaticasBundle:Default:programa.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/programa.html.twig',

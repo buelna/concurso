@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Collector/exception.html.twig */
+/* WebProfilerBundle:Collector:exception.html.twig */
 class __TwigTemplate_d30a6b243e13dcaddd7551bfe00849c0ae70c1af149daaf26dc3e57d5eb72c9a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -105,7 +105,7 @@ class __TwigTemplate_d30a6b243e13dcaddd7551bfe00849c0ae70c1af149daaf26dc3e57d5eb
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Collector/exception.html.twig";
+        return "WebProfilerBundle:Collector:exception.html.twig";
     }
 
     public function isTraitable()
