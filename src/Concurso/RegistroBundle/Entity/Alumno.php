@@ -183,10 +183,10 @@ class Alumno
     /**
      * Set semestre
      *
-     * @param \integer $semestre
+     * @param integer 
      * @return Alumno
      */
-    public function setSemestre(\integer $semestre)
+    public function setSemestre($semestre)
     {
         $this->semestre = $semestre;
 

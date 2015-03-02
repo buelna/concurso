@@ -1,14 +1,79 @@
 {% extends '::base.html.twig' %}
 {% block content %}
 	<div class="row">
-		<div class="large-12 columns" align="center">
-			Datos de usuario:</br>
+		<div class="large-12 columns">
+
+			<!--Datos de usuario:</br>
 			Nombre: {{ usuario.nombre }}</br>
-			Nombre: {{ usuario.email }}
-			<div>
+			Email: {{ usuario.email }}</br>-->
+			</br>
+			</br>
+			<h2 class="subheader">Equipo</h2>
+			{%if equipos %}
+				{% for equipo in equipos %}
+					<div class="large-6 columns">
+						Nombre del equipo</br>
+						{{ equipo.nombre }}</br></br>
+						Preparatoria de procedencia</br>
+						{{ equipo.preparatoria }} </br>
+						<a href="{{ path('equipo_delete', { 'id': equipo.id }) }}" class="button alert">Eliminar equipo</a>
+						<a href="{{ path('equipo_edit', { 'id': equipo.id }) }}" class="button success">Editar equipo</a>
+					</div>	
+				{% endfor %}	
+
+				<div class="large-12 columns">
+                
+ 		              <table>
+		                <thead>
+		                  <tr>
+		                    <th>Nombre</th>
+		                    <th>Semestre</th>
+		                    <th>CURP</th>
+		                    <th>Email</th>
+		                    <th></th>
+		                  </tr>
+		                </thead>
+		                <tbody>
+							{% for alumno in alumnos %}
+		                     	 <tr>
+		                              <td>{{ alumno.nombre }} {{ alumno.apellidoPaterno }} {{ alumno.apellidoMaterno }}</td>
+		                              <td>{{ alumno.semestre }}</td>
+		                              <td>{{ alumno.curp }}</td>
+		                              <td>{{ alumno.email }}</td>
+		                              <td>
+		                                  <ul>
+		                                      <li>
+		                                            <a href="{{ path('alumno_delete', { 'id': alumno.id }) }}">delete</a>
+		                                      </li>
+		                                      <li>
+		                                            <a href="{{ path('alumno_edit', { 'id': alumno.id }) }}">edit</a>
+		                                      </li>
+		                                  </ul>
+		                              </td>    
+		                              
+		                          </tr>
+		                      
+		                      {% endfor %}
+
+		                </tbody>
+		              </table>
+	                  <div class="btn-group">
+	                     <a href="{{path('alumno_new')}}"><button class="btn btn-success">Agregar alumno <i class="icon-plus icon-white"></i></button></a>
+	                 </div>        
+	                
+	                
+	            </div>
+
+
+
+			{% else %}
+				<a href="{{ path('equipo_new') }}" class="button expand">Crea tu equipo</a>
+			{% endif %}
+
+						
 			    <a href="{{path('logout')}}">Logout</a>
-			</div>
-			<hr>
+			
+			
 		</div>
 	</div>
 {% endblock %}

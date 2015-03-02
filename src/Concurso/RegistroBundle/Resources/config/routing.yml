@@ -1,0 +1,48 @@
+equipo_new:
+    pattern:  /equipo/new
+    defaults: { _controller: RegistroBundle:Equipo:new }
+
+equipo_edit:
+    pattern:  /equipo/edit/{id}
+    defaults: { _controller: RegistroBundle:Equipo:edit }
+
+equipo_show:
+    pattern:  /equipo/show/{id}
+    defaults: { _controller: RegistroBundle:Equipo:show }
+
+equipo_create:
+    pattern:  /equipo/create
+    defaults: { _controller: RegistroBundle:Equipo:create }
+
+equipo_update:
+    pattern:  /equipo/update/{id}
+    defaults: { _controller: RegistroBundle:Equipo:update }
+
+equipo_delete:
+    pattern:  /equipo/delete/{id}
+    defaults: { _controller: RegistroBundle:Equipo:delete}
+
+
+alumno_new:
+    pattern:  /alumno/new
+    defaults: { _controller: RegistroBundle:Alumno:new }
+
+alumno_edit:
+    pattern:  /alumno/edit/{id}
+    defaults: { _controller: RegistroBundle:Alumno:edit }
+
+alumno_show:
+    pattern:  /alumno/show/{id}
+    defaults: { _controller: RegistroBundle:Alumno:show }
+
+alumno_create:
+    pattern:  /alumno/create
+    defaults: { _controller: RegistroBundle:Alumno:create }
+
+alumno_update:
+    pattern:  /alumno/update/{id}
+    defaults: { _controller: RegistroBundle:Alumno:update }
+
+alumno_delete:
+    pattern:  /alumno/delete/{id}
+    defaults: { _controller: RegistroBundle:Alumno:delete}
