@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Concurso\RegistroBundle\Entity\Equipo;
 use Concurso\RegistroBundle\Form\EquipoType;
+use Concurso\RegistroBundle\Form\EquipoEditType;
 
 /**
  * Equipo controller.
@@ -159,7 +160,7 @@ class EquipoController extends Controller
             throw $this->createNotFoundException('Unable to find Miembro entity.');
         }
 
-        $form = $this->createForm(new EquipoType(), $entity, array(
+        $form = $this->createForm(new EquipoEditType(), $entity, array(
             'action' => $this->generateUrl('equipo_edit', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
@@ -242,6 +243,15 @@ class EquipoController extends Controller
     public function deleteAction(Request $request, $id)
     {
             $em = $this->getDoctrine()->getManager();
+            $query = $em->createQuery(
+                'DELETE
+                 FROM RegistroBundle:Alumno p
+                 WHERE p.idEquipo =  :id_Equipo '
+            )->setParameter('id_Equipo', $id);
+
+            $alumnos = $query->getResult();
+
+           
             $entity = $em->getRepository('RegistroBundle:Equipo')->find($id);
 
             if (!$entity) {

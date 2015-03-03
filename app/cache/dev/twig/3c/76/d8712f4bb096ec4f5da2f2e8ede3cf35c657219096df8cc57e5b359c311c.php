@@ -37,43 +37,51 @@ class __TwigTemplate_3c76d8712f4bb096ec4f5da2f2e8ede3cf35c657219096df8cc57e5b359
     {
         // line 4
         echo "\t<div class=\"row\">
-\t\t<div class=\"large-12 columns\" align=\"center\">
-\t    \t<h1>Creacion de equipo</h1>
+        <div class=\"large-12 columns\" >
+            </br></br>
+            <h1 align=\"center\">Creación de equipo</h1></br>
 
-\t    \t";
-        // line 8
+            <div class=\"large-6 columns\" >
+
+    \t    \t";
+        // line 11
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("action" => $this->env->getExtension('routing')->getPath("equipo_new"), "method" => "POST"));
         echo " 
-                    \t";
-        // line 9
+                        \t";
+        // line 12
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "idUsuario", array()), 'errors');
+        echo "
+                            ";
+        // line 13
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'label', array("label" => "Nombre del equipo"));
         echo "
-                        ";
-        // line 10
+                            ";
+        // line 14
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'widget');
         echo "
-                        ";
-        // line 11
+                            ";
+        // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "preparatoria", array()), 'label', array("label" => "Preparatoria de procedencia"));
         echo "
-                        ";
-        // line 12
+                            ";
+        // line 16
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "preparatoria", array()), 'widget');
         echo "
-                        <p hidden>
-                        ";
-        // line 14
+                            <p hidden>
+                            ";
+        // line 18
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "idUsuario", array()), 'widget');
         echo "</p>
-                        <br>
-                        <input type=\"submit\" value=\"Save\" >
-                         <br>
-                ";
-        // line 18
+                            <br>
+                            <button type=\"submit\" class=\"btn-blue width-50\" >Guardar</button>
+                             <br>
+                    ";
+        // line 22
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
-\t\t</div>
-\t</div>
+    \t\t</div>
+    \t</div>
+    </div>    
      
 ";
     }
@@ -90,6 +98,6 @@ class __TwigTemplate_3c76d8712f4bb096ec4f5da2f2e8ede3cf35c657219096df8cc57e5b359
 
     public function getDebugInfo()
     {
-        return array (  73 => 18,  66 => 14,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  80 => 22,  73 => 18,  68 => 16,  64 => 15,  60 => 14,  56 => 13,  52 => 12,  48 => 11,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

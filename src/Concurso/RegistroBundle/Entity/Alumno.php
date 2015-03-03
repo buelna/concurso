@@ -4,6 +4,7 @@ namespace Concurso\RegistroBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Alumno
@@ -13,7 +14,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity(
  *     fields={"curp"},
  *     errorPath="curp",
- *     message="Este usuario ya se encuentra registrado"
+ *     message="Este CURP ya se encuentra registrado"
  * )
  */
 class Alumno
@@ -59,6 +60,7 @@ class Alumno
      * @var integer
      *
      * @ORM\Column(name="semestre", type="integer", length=11)
+     * @Assert\NotBlank()
      */
     private $semestre;
 
@@ -66,14 +68,20 @@ class Alumno
      * @var string
      *
      * @ORM\Column(name="curp", type="string", length=20)
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z]{4}+[0-9]{6}+[a-zA-Z]{6}+[a-zA-Z0-9]{2}/",
+     *     match=true,
+     *     message="Formato de curp no es correcto"
+     * )
      */
+    
     private $curp;
 
     /**
      * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="Concurso\RegistroBundle\Entity\Equipo")
-     * @ORM\JoinColumn(name="idEquipo", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Concurso\RegistroBundle\Entity\Equipo",cascade={"all"})
+     * @ORM\JoinColumn(name="idEquipo", referencedColumnName="id",onDelete="CASCADE")
      */
     private $idEquipo;
 

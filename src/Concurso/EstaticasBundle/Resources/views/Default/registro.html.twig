@@ -8,21 +8,26 @@
 			Email: {{ usuario.email }}</br>-->
 			</br>
 			</br>
-			<h2 class="subheader">Equipo</h2>
+			
 			{%if equipos %}
-				{% for equipo in equipos %}
-					<div class="large-6 columns">
-						Nombre del equipo</br>
-						{{ equipo.nombre }}</br></br>
-						Preparatoria de procedencia</br>
-						{{ equipo.preparatoria }} </br>
-						<a href="{{ path('equipo_delete', { 'id': equipo.id }) }}" class="button alert">Eliminar equipo</a>
-						<a href="{{ path('equipo_edit', { 'id': equipo.id }) }}" class="button success">Editar equipo</a>
-					</div>	
-				{% endfor %}	
-
+				<div class="large-6 columns">
+				<h2 class="subheader">Equipo</h2>	
+					{% for equipo in equipos %}
+						<dl>
+							<dt>Nombre del equipo:</dt>
+							<dd>{{ equipo.nombre }}</br></br></dd>
+							<dt>Preparatoria de procedencia:</dt>
+							<dd>{{ equipo.preparatoria }} </br></br></dd>
+						</dl>
+						<a href="{{ path('equipo_delete', { 'id': equipo.id }) }}" class="btn btn-red">Eliminar equipo</a>
+						<a href="{{ path('equipo_edit', { 'id': equipo.id }) }}" class="btn btn-blue">Editar equipo</a>
+						
+					{% endfor %}	
+				</div>
 				<div class="large-12 columns">
-                
+					<hr>
+                	<h3 class="subheader">Alumnos</h3>
+                	<div class="table-container">
  		              <table>
 		                <thead>
 		                  <tr>
@@ -41,14 +46,11 @@
 		                              <td>{{ alumno.curp }}</td>
 		                              <td>{{ alumno.email }}</td>
 		                              <td>
-		                                  <ul>
-		                                      <li>
-		                                            <a href="{{ path('alumno_delete', { 'id': alumno.id }) }}">delete</a>
-		                                      </li>
-		                                      <li>
-		                                            <a href="{{ path('alumno_edit', { 'id': alumno.id }) }}">edit</a>
-		                                      </li>
-		                                  </ul>
+		                                  
+                                        <a href="{{ path('alumno_delete', { 'id': alumno.id }) }}" >Eliminar</a>
+                                  
+                                        <a href="{{ path('alumno_edit', { 'id': alumno.id }) }}" >Editar</a>
+		                                      
 		                              </td>    
 		                              
 		                          </tr>
@@ -56,10 +58,11 @@
 		                      {% endfor %}
 
 		                </tbody>
-		              </table>
+		              </table><br>
 	                  <div class="btn-group">
-	                     <a href="{{path('alumno_new')}}"><button class="btn btn-success">Agregar alumno <i class="icon-plus icon-white"></i></button></a>
-	                 </div>        
+	                     <a href="{{path('alumno_new')}}" ><button class="btn btn-success" >Agregar alumno <i class="icon-plus icon-white"></i></button></a>
+	                  </div>  
+	                </div>         
 	                
 	                
 	            </div>

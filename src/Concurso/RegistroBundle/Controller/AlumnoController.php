@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Concurso\RegistroBundle\Entity\Alumno;
 use Concurso\RegistroBundle\Form\AlumnoType;
+use Concurso\RegistroBundle\Form\AlumnoEditType;
 
 /**
  * Alumno controller.
@@ -169,13 +170,24 @@ class AlumnoController extends Controller
             throw $this->createNotFoundException('Unable to find Alumno entity.');
         }
 
-        $editForm = $this->createEditForm($entity);
-        $deleteForm = $this->createDeleteForm($id);
+        $form = $this->createForm(new AlumnoEditType(), $entity, array(
+            'action' => $this->generateUrl('alumno_edit', array('id' => $entity->getId())),
+            'method' => 'PUT',
+        ));
 
+        $form->handleRequest($this->getRequest());
+
+       if ($form->isValid()) {
+            
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('registro'));
+        }
+
+        
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'entity' => $entity, 
+            'form' => $form->createView()
         );
     }
 
@@ -239,14 +251,13 @@ class AlumnoController extends Controller
     public function deleteAction(Request $request, $id)
     {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('RegistroBundle:Alumno')->find($id);
+            $query = $em->createQuery(
+                'DELETE
+                 FROM RegistroBundle:Alumno p
+                 WHERE p.id =  :id '
+            )->setParameter('id', $id);
 
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Alumno entity.');
-            }
-
-            $em->remove($entity);
-            $em->flush();
+            $alumnos = $query->getResult();
 
             return $this->redirect($this->generateUrl('registro'));
     }

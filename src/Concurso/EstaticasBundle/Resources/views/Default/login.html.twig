@@ -4,21 +4,19 @@
 		<div class="large-12 columns" align="center">
 			<div class="large-6 columns">
 				</br>
-				<h1>Inicio sesion</h1>
+				<h1>Inicio de sesi&oacuten</h1>
 				{% if error %}
 				    <div>{{ error.message }}</div>
 				{% endif %}
 
-				<form action="{{ path('login_check') }}" method="post">
-				    <label for="username">Username:</label>
-				    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+				<form action="{{ path('login_check') }}" method="post" class="forms">
+				    <input placeholder="Email" type="text" id="username" name="_username" value="{{ last_username }}" />
 
-				    <label for="password">Password:</label>
-				    <input type="password" id="password" name="_password" />
+				    <input type="password" id="password" name="_password" placeholder="Password"  />
 
 				    
 
-				    <button type="submit">login</button>
+				    <button type="submit" class="btn-blue width-100">Iniciar sesi&oacuten</button>
 				</form>
 			</div>
 			<div class="large-6 columns" align="center">
@@ -28,7 +26,7 @@
 		          <hr>
 				</div>
 				<div class="row">
-					<a href="{{ path('usuario_new') }}" class="button expand">Registrate</a>
+					<a href="{{ path('usuario_new') }}" class="button expand">Reg&iacutestrate</a>
 				</div>
 			</div>
 

@@ -24,13 +24,23 @@ class AlumnoType extends AbstractType
             ->add('apellidoPaterno')
             ->add('apellidoMaterno')
             ->add('email')
-            ->add('semestre')
+            ->add('semestre', 'choice', array(
+                'choices' => array(
+                    1 => '1',
+                    2 => '2',
+                    3 => '3',
+                    4 => '4',
+                    5 => '5',
+                    6 => '6',
+                    7 => '7',
+                ),
+                'required'    => false,
+                'placeholder' => 'Elige el semestre',
+                'empty_data'  => null
+            ))
             ->add('curp')
             ->add('idEquipo','entity', array(
                      'class' => 'RegistroBundle:Equipo',
-                     //'property' => 'id',
-                     //'disabled'=> true,
-                     //'read_only' => true,
                      'data' => $this->em->getReference("RegistroBundle:Equipo", $this->id)
                 ))
         ;

@@ -2,31 +2,35 @@
 
 {% block content %}
 	<div class="row">
-        
-        <h1 align="center">Creación de equipo</h1>
+        <div class="large-12 columns" >
+            </br></br>
+            <h1 align="center">Editar alumno</h1></br>
 
-        <div class="large-6 columns" >
+            <div class="large-6 columns">
 
-    		{{ form_start(form, { 'action': path('alumno_edit', { 'id': entity.id }), 'method': 'PUT' }) }} 
-                {{ form_label(form.nombre, 'Nombre') }}
-                {{ form_widget(form.nombre) }}
-                {{ form_label(form.apellidoPaterno, 'Apellido Paterno') }}
-                {{ form_widget(form.apellidoPaterno) }}
-                {{ form_label(form.apellidoMaterno, 'Apellido Materno') }}
-                {{ form_widget(form.apellidoMaterno) }}
-                {{ form_label(form.curp, 'CURP') }}
-                {{ form_widget(form.curp) }}
-                {{ form_label(form.semestre, 'Semestre') }}
-                {{ form_widget(form.semestre) }}
-                {{ form_label(form.email, 'Email') }}
-                {{ form_widget(form.email) }}
-                
-                <br>
-                <p hidden>{{ form_widget(form.idEquipo) }}</p>
-                <input type="submit" value="Save" >
-                 <br>
-            {{ form_end(form) }}
-    	</div>
-    </div>
+        		{{ form_start(form, { 'action': path('alumno_edit', { 'id': entity.id }), 'method': 'PUT' }) }} 
+                    {{ form_label(form.nombre, 'Nombre') }}
+                    {{ form_widget(form.nombre) }}
+                    {{ form_label(form.apellidoPaterno, 'Apellido Paterno') }}
+                    {{ form_widget(form.apellidoPaterno) }}
+                    {{ form_label(form.apellidoMaterno, 'Apellido Materno') }}
+                    {{ form_widget(form.apellidoMaterno) }}
+                    {{ form_label(form.curp, 'CURP') }}
+                    {{ form_widget(form.curp) }}
+                    {{ form_errors(form.curp) }}
+                    {{ form_label(form.semestre, 'Semestre') }}
+                    {{ form_widget(form.semestre) }}
+                    {{ form_errors(form.semestre) }}
+                    {{ form_label(form.email, 'Email') }}
+                    {{ form_widget(form.email) }}
+                    
+                    <br>
+                    <p hidden>{{ form_widget(form.idEquipo) }}</p>
+                    <button type="submit" class="btn-blue width-50" >Guardar</button>
+                     <br>
+                {{ form_end(form) }}
+        	</div>
+        </div>
+    </div>    
 
 {% endblock %}
