@@ -15,7 +15,7 @@ security:
     firewalls:
         registro:
             provider: usuarios
-            pattern:  ^/(registro|login|login_check|logout|equipo|alumno)
+            pattern:  ^/(registro|login|login_check|logout|equipo|alumno|inicio|convocatoria|programa|ejemplos|contactos)
             anonymous:      ~
             form_login:
                 login_path: login
@@ -26,6 +26,7 @@ security:
 
 
     access_control:
+        - { path: ^/(inicio|convocatoria|programa|ejemplos|contactos), roles: [IS_AUTHENTICATED_ANONYMOUSLY,ROLE_USER] }
         - { path: ^/registro, roles: ROLE_USER }
         - { path: ^/equipo, roles: ROLE_USER }
 

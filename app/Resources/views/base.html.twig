@@ -34,7 +34,8 @@
                     <li><a href="{{ path('ejemplos') }}">Ejemplos</a></li>
                     <li><a href="{{ path('registro') }}">Pre-Registro</a></li>
                     <li><a href="{{ path('contactos') }}">Contactos</a></li>
-                    <li><a href="{{path('login')}}" class="button">Login</a></li>
+                    <li><a href="{{app.user ? path('logout') : path('login')}}" class="button">
+                    {{app.user ? "Logout" : "Login"}}</a></li>
                   </ul>
                 </section>
               </nav>

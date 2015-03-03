@@ -31,10 +31,14 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
         // line 6
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/css/foundation.css"), "html", null, true);
         echo "\" />
-        ";
+        <link rel=\"stylesheet\" href=\"";
         // line 7
-        $this->displayBlock('stylesheets', $context, $blocks);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/css/kube.css"), "html", null, true);
+        echo "\" />
+        ";
         // line 8
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 9
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
@@ -44,7 +48,7 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
           <div class=\"row\">
                <div class=\"large-12 columns\">
                   <img src=\"";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("banner_oficial.jpg"), "html", null, true);
         echo "\">
                </div>
@@ -63,33 +67,37 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
                 <section class=\"top-bar-section\">
                   <ul class=\"left\">
                     <li><a href=\"";
-        // line 30
+        // line 31
         echo $this->env->getExtension('routing')->getPath("inicio");
         echo "\">Inicio</a></li>
                     <li><a href=\"";
-        // line 31
+        // line 32
         echo $this->env->getExtension('routing')->getPath("convocatoria");
         echo "\">Convocatoria</a></li>
                     <li><a href=\"";
-        // line 32
+        // line 33
         echo $this->env->getExtension('routing')->getPath("programa");
         echo "\">Programa</a></li>
                     <li><a href=\"";
-        // line 33
+        // line 34
         echo $this->env->getExtension('routing')->getPath("ejemplos");
         echo "\">Ejemplos</a></li>
                     <li><a href=\"";
-        // line 34
+        // line 35
         echo $this->env->getExtension('routing')->getPath("registro");
         echo "\">Pre-Registro</a></li>
                     <li><a href=\"";
-        // line 35
+        // line 36
         echo $this->env->getExtension('routing')->getPath("contactos");
         echo "\">Contactos</a></li>
                     <li><a href=\"";
-        // line 36
-        echo $this->env->getExtension('routing')->getPath("login");
-        echo "\" class=\"button\">Login</a></li>
+        // line 37
+        echo (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) ? ($this->env->getExtension('routing')->getPath("logout")) : ($this->env->getExtension('routing')->getPath("login")));
+        echo "\" class=\"button\">
+                    ";
+        // line 38
+        echo (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) ? ("Logout") : ("Login"));
+        echo "</a></li>
                   </ul>
                 </section>
               </nav>
@@ -97,9 +105,9 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
           </div>
         </div>
         ";
-        // line 43
+        // line 45
         $this->displayBlock('content', $context, $blocks);
-        // line 46
+        // line 48
         echo "      </div>
       <footer class=\"site-footer\" >
         <div class=\"large-12 columns\">
@@ -115,31 +123,31 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
         </div>
       </footer>
   <script src=\"";
-        // line 60
+        // line 62
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 61
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.js"), "html", null, true);
-        echo "\"></script>
-  <script src=\"";
-        // line 62
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.dropdown.js"), "html", null, true);
-        echo "\"></script>
-  <script src=\"";
         // line 63
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.tab.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
         // line 64
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/vendor/jquery.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.dropdown.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
         // line 65
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.tab.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
         // line 66
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/vendor/jquery.js"), "html", null, true);
+        echo "\"></script>
+  <script src=\"";
+        // line 67
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.js"), "html", null, true);
+        echo "\"></script>
+  <script src=\"";
+        // line 68
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/concursoestaticas/js/foundation/foundation.topbar.js"), "html", null, true);
         echo "\"></script>
   <script>
@@ -156,15 +164,15 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
         echo "Bienvenido!";
     }
 
-    // line 7
+    // line 8
     public function block_stylesheets($context, array $blocks = array())
     {
     }
 
-    // line 43
+    // line 45
     public function block_content($context, array $blocks = array())
     {
-        // line 44
+        // line 46
         echo "
         ";
     }
@@ -181,6 +189,6 @@ class __TwigTemplate_6024a47ce03be2759b435a1ad091b25045fffd31cb478395118de374b56
 
     public function getDebugInfo()
     {
-        return array (  168 => 44,  165 => 43,  160 => 7,  154 => 5,  143 => 66,  139 => 65,  135 => 64,  131 => 63,  127 => 62,  123 => 61,  119 => 60,  103 => 46,  101 => 43,  91 => 36,  87 => 35,  83 => 34,  79 => 33,  75 => 32,  71 => 31,  67 => 30,  48 => 14,  38 => 8,  36 => 7,  32 => 6,  28 => 5,  22 => 1,);
+        return array (  176 => 46,  173 => 45,  168 => 8,  162 => 5,  151 => 68,  147 => 67,  143 => 66,  139 => 65,  135 => 64,  131 => 63,  127 => 62,  111 => 48,  109 => 45,  99 => 38,  95 => 37,  91 => 36,  87 => 35,  83 => 34,  79 => 33,  75 => 32,  71 => 31,  52 => 15,  42 => 9,  40 => 8,  36 => 7,  32 => 6,  28 => 5,  22 => 1,);
     }
 }

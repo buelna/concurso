@@ -37,49 +37,62 @@ class __TwigTemplate_d2c08e199f9ac623585b28e53c87b8186e301259e83357330a0403a12e8
     {
         // line 3
         echo "\t<div class=\"row\">
-\t\t<div class=\"large-12 columns\" align=\"center\">
-\t\t\t<div class=\"large-6 columns\">
-\t\t\t\t</br>
-\t\t\t\t<h1>Registro</h1>
+\t\t<div class=\"large-12 columns\" >
+\t\t\t</br></br>
+                <div align=\"center\"><h1 >Registro</h1></br></div>
+            <div class=\"large-6 columns\">
+\t\t\t\t
 \t\t\t\t";
-        // line 8
+        // line 9
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("action" => $this->env->getExtension('routing')->getPath("usuario_new"), "method" => "POST"));
         echo " 
                     \t";
-        // line 9
+        // line 10
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'label', array("label" => "Nombre"));
         echo "
                         ";
-        // line 10
+        // line 11
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'widget');
         echo "
                         ";
-        // line 11
+        // line 12
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'label', array("label" => "Email"));
         echo "
                         ";
-        // line 12
+        // line 13
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget');
         echo "
                         ";
-        // line 13
+        // line 14
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'label', array("label" => "Contraseña"));
         echo "
                         ";
-        // line 14
+        // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'widget');
         echo "
+                        ";
+        // line 16
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "telefono", array()), 'label', array("label" => "Telefono"));
+        echo "
+                        ";
+        // line 17
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "telefono", array()), 'widget');
+        echo "
+                        ";
+        // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "captcha", array()), 'widget');
+        echo "
                         <br>
-                        <input type=\"submit\" value=\"Save\" >
+                        <button type=\"submit\" class=\"btn-blue width-50\" >Guardar</button>
                          <br>
                 ";
-        // line 18
+        // line 22
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 \t\t\t</div>
 \t\t\t
 
-\t\t\t<hr>
+\t\t\t
 \t\t</div>
 \t</div>
 ";
@@ -97,6 +110,6 @@ class __TwigTemplate_d2c08e199f9ac623585b28e53c87b8186e301259e83357330a0403a12e8
 
     public function getDebugInfo()
     {
-        return array (  77 => 18,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  54 => 10,  50 => 9,  46 => 8,  39 => 3,  36 => 2,  11 => 1,);
+        return array (  90 => 22,  83 => 18,  79 => 17,  75 => 16,  71 => 15,  67 => 14,  63 => 13,  59 => 12,  55 => 11,  51 => 10,  47 => 9,  39 => 3,  36 => 2,  11 => 1,);
     }
 }

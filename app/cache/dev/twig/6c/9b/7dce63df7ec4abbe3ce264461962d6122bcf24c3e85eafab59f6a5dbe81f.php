@@ -38,7 +38,10 @@ class __TwigTemplate_6c9b7dce63df7ec4abbe3ce264461962d6122bcf24c3e85eafab59f6a5d
         // line 3
         echo "\t<div class=\"row\">
 \t\t<div class=\"large-12 columns\" align=\"center\">
-\t\t\t<h1> En construcción...</h1>
+\t\t\t<img align=\"center\" height=\"100%\" width=\"100%\" src=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("convocatoria.jpg"), "html", null, true);
+        echo "\">
 \t\t\t<hr>
 \t\t</div>
 \t</div>
@@ -57,6 +60,6 @@ class __TwigTemplate_6c9b7dce63df7ec4abbe3ce264461962d6122bcf24c3e85eafab59f6a5d
 
     public function getDebugInfo()
     {
-        return array (  39 => 3,  36 => 2,  11 => 1,);
+        return array (  43 => 5,  39 => 3,  36 => 2,  11 => 1,);
     }
 }
