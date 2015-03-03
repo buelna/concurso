@@ -17,29 +17,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints as DoctrineAssert;
 
 class Usuario implements UserInterface {
 
-    /**
-     * Método requerido por la interfaz UserInterface
-     */
-    public function eraseCredentials()
-    {
-    }
-
-    /**
-     * Método requerido por la interfaz UserInterface
-     */
-    public function getRoles()
-    {
-        return array('ROLE_USER');
-    }
-
-    /**
-     * Método requerido por la interfaz UserInterface
-     */
-    public function getUsername()
-    {
-        return $this->getEmail();
-    }
-
+    
     /**
      * @var integer $id
      *
@@ -66,6 +44,13 @@ class Usuario implements UserInterface {
     private $email;
 
     /**
+     * @var string $telefono
+     *
+     * @ORM\Column(name="telefono", type="string", length=255)
+     */
+    private $telefono;
+
+    /**
      * @var string $password
      *
      * @ORM\Column(name="password", type="string", length=255)
@@ -74,6 +59,7 @@ class Usuario implements UserInterface {
      */
     private $password;
 
+    
     /**
      * @var string salt
      *
@@ -147,6 +133,26 @@ class Usuario implements UserInterface {
     }
 
     /**
+     * Set telefono
+     *
+     * @param string $telefono
+     */
+    public function setTelefono($telefono)
+    {
+        $this->telefono = $telefono;
+    }
+
+    /**
+     * Get telefono
+     *
+     * @return string
+     */
+    public function getTelefono()
+    {
+        return $this->telefono;
+    }
+
+    /**
      * Set password
      *
      * @param string $password
@@ -166,6 +172,7 @@ class Usuario implements UserInterface {
         return $this->password;
     }
 
+    
     /**
      * Set salt
      *
@@ -186,5 +193,27 @@ class Usuario implements UserInterface {
         return $this->salt;
     }
 
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function eraseCredentials()
+    {
+    }
+
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+
+    /**
+     * Método requerido por la interfaz UserInterface
+     */
+    public function getUsername()
+    {
+        return $this->getEmail();
+    }
    
 }

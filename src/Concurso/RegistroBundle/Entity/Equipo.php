@@ -3,12 +3,18 @@
 namespace Concurso\RegistroBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Equipo
  *
  * @ORM\Table()
  * @ORM\Entity
+ * @UniqueEntity(
+ *     fields={"idUsuario"},
+ *     errorPath="idUsuario",
+ *     message="Este usuario solo debe tener un equipo"
+ * )
  */
 class Equipo
 {

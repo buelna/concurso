@@ -7,13 +7,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\SecurityContext;
 use Concurso\RegistroBundle\Entity\Usuario;
 use Concurso\RegistroBundle\Form\UsuarioType;
+use Doctrine\Common\DataFixtures\ReferenceRepository;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
-class UsuarioController extends Controller
+class UsuarioController extends Controller 
 {
+
     public function loginAction(Request $request)
     {
          $session = $request->getSession();
@@ -67,6 +72,7 @@ class UsuarioController extends Controller
 
             $em->persist($usuario);
             $em->flush();
+            
 
             $token = new UsernamePasswordToken($usuario, null, 'usuarios', $usuario->getRoles());
             $this->container->get('security.context')->setToken($token);
