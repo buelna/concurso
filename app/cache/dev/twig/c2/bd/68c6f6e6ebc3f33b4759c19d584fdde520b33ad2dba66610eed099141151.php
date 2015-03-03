@@ -77,7 +77,7 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
 \t        </div>
 \t        <div class=\"large-10 columns\">
 \t        \t<p>Premiación y Clausura<br/>
-\t\t\t\tugar: Sala audiovisual del edificio “G”.</p>
+\t\t\t\tugar: Sala audiovisual del edificio “D”.</p>
 \t        </div>
 \t        <hr>
       \t</div>

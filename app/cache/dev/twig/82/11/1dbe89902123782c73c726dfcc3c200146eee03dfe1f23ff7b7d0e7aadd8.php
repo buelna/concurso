@@ -73,7 +73,7 @@ class __TwigTemplate_82111dbe89902123782c73c726dfcc3c200146eee03dfe1f23ff7b7d0e7
       <div class=\"row\">
         <div class=\"large-12 columns\">
             <strong>¿Cuáles son los premios?</strong><br/>
-            <p>Una tableta a cada integrante del equipo ganador del primer lugar. Beca para estudiar en el ITM a los integrantes de los equipos ganadores de los primeros cinco lugares.</p>
+            <p>Una tableta a cada integrante del equipo ganador del primer lugar. Una memoria USB de 32GB a cada integrante del equipo ganador del segundo lugar. Beca de inscripción en el ITM a los integrantes de los equipos ganadores de los primeros tres lugares.</p>
         </div>
       </div>
       <div class=\"row\">
