@@ -1,0 +1,5 @@
+[2015-03-04 12:42:41] request.INFO: Matched route "concurso_estaticas_homepage" (parameters: "_controller": "Concurso\EstaticasBundle\Controller\EstaticasController::indexAction", "_route": "concurso_estaticas_homepage") [] []
+[2015-03-04 12:42:41] security.DEBUG: Read SecurityContext from the session [] []
+[2015-03-04 12:42:41] security.DEBUG: Reloading user from user provider. [] []
+[2015-03-04 12:42:41] request.CRITICAL: Uncaught PHP Exception PDOException: "SQLSTATE[42000] [1049] Unknown database 'concursoprog'" at /var/www/concurso/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php line 40 {"exception":"[object] (PDOException(code: 1049): SQLSTATE[42000] [1049] Unknown database 'concursoprog' at /var/www/concurso/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:40)"} []
+[2015-03-04 12:42:41] security.DEBUG: Write SecurityContext in the session [] []
