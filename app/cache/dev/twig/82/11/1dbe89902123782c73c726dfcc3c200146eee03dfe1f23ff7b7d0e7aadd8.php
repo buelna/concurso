@@ -76,17 +76,6 @@ class __TwigTemplate_82111dbe89902123782c73c726dfcc3c200146eee03dfe1f23ff7b7d0e7
             <p>Una tableta a cada integrante del equipo ganador del primer lugar. Una memoria USB de 32GB a cada integrante del equipo ganador del segundo lugar. Beca de inscripción en el ITM a los integrantes de los equipos ganadores de los primeros tres lugares.</p>
         </div>
       </div>
-      <div class=\"row\">
-        <div class=\"large-12 columns\" align=\"center\">
-          <img align=\"center\" height=\"100%\" width=\"100%\" src=\"";
-        // line 42
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("poster.jpg"), "html", null, true);
-        echo "\">
-          <hr>
-        </div>
-      </div>
-    
-       
 ";
     }
 
@@ -102,6 +91,6 @@ class __TwigTemplate_82111dbe89902123782c73c726dfcc3c200146eee03dfe1f23ff7b7d0e7
 
     public function getDebugInfo()
     {
-        return array (  83 => 42,  44 => 6,  39 => 3,  36 => 2,  11 => 1,);
+        return array (  44 => 6,  39 => 3,  36 => 2,  11 => 1,);
     }
 }
