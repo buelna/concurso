@@ -38,8 +38,32 @@ class __TwigTemplate_0b12521ee89c1d1cd6e8eb457f5a37f17f09698aa1f70ecedc526fd5450
         // line 3
         echo "\t<div class=\"row\">
 \t\t<div class=\"large-12 columns\" align=\"center\">
-\t\t\t<h1> En construcción...</h1>
+\t\t\t<h1> </h1>
+\t\t\t<p>En este documento se muestran algunos ejemplos con código, para familizarizarse con los problemas a resolver durante el concurso:</p>
 \t\t\t<hr>
+\t\t</div>
+\t</div>
+\t<div class=\"row\">
+\t\t<style type=\"text/css\"> 
+\t\t#portapdf { 
+\t\t    width: 100%; 
+\t\t    height: 100%; 
+\t\t    border: 1px solid #484848; 
+\t\t    margin: 0 auto; 
+\t\t} 
+\t\t</style> 
+\t\t<div id=\"portapdf\">
+\t\t\t<object data=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("EjemplosCONREPRO2015.pdf"), "html", null, true);
+        echo "\" type=\"application/pdf\" width=\"100%\" height=\"100%\"></object> 
+\t\t</div>
+\t\t<div>
+\t\t\t<p>Si no puedes ver el documento clic <a href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("EjemplosCONREPRO2015.pdf"), "html", null, true);
+        echo "\">aquí</a>
+\t\t\t</p> 
 \t\t</div>
 \t</div>
 ";
@@ -57,6 +81,6 @@ class __TwigTemplate_0b12521ee89c1d1cd6e8eb457f5a37f17f09698aa1f70ecedc526fd5450
 
     public function getDebugInfo()
     {
-        return array (  39 => 3,  36 => 2,  11 => 1,);
+        return array (  64 => 23,  58 => 20,  39 => 3,  36 => 2,  11 => 1,);
     }
 }

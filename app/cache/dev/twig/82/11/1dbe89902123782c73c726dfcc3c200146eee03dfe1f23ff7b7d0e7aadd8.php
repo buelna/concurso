@@ -61,7 +61,7 @@ class __TwigTemplate_82111dbe89902123782c73c726dfcc3c200146eee03dfe1f23ff7b7d0e7
       <div class=\"row\">
         <div class=\"large-12 columns\">
             <strong>¿Cuándo se llevara a cabo?</strong><br/>
-            <p>El viernes 17 de Abril del 2015.</p>
+            <p>El viernes 24 de Abril del 2015.</p>
         </div>
       </div>
       <div class=\"row\">
