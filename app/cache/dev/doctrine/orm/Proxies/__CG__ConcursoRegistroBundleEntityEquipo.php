@@ -64,10 +64,10 @@ class Equipo extends \Concurso\RegistroBundle\Entity\Equipo implements \Doctrine
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'id', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'nombre', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'preparatoria', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'idUsuario');
+            return array('__isInitialized__', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'id', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'nombre', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'preparatoria', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'lenguaje', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'idUsuario');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'id', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'nombre', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'preparatoria', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'idUsuario');
+        return array('__isInitialized__', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'id', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'nombre', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'preparatoria', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'lenguaje', '' . "\0" . 'Concurso\\RegistroBundle\\Entity\\Equipo' . "\0" . 'idUsuario');
     }
 
     /**
@@ -230,6 +230,28 @@ class Equipo extends \Concurso\RegistroBundle\Entity\Equipo implements \Doctrine
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPreparatoria', array());
 
         return parent::getPreparatoria();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLenguaje($lenguaje)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLenguaje', array($lenguaje));
+
+        return parent::setLenguaje($lenguaje);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLenguaje()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLenguaje', array());
+
+        return parent::getLenguaje();
     }
 
     /**

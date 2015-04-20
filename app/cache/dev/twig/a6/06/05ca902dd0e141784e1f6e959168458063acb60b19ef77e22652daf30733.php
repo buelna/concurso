@@ -67,16 +67,24 @@ class __TwigTemplate_a60605ca902dd0e141784e1f6e959168458063acb60b19ef77e22652daf
         // line 16
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "preparatoria", array()), 'widget');
         echo "
-                            <p hidden>
+                            ";
+        // line 17
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lenguaje", array()), 'label', array("label" => "Lenguaje de programación"));
+        echo "
                             ";
         // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lenguaje", array()), 'widget');
+        echo "
+                            <p hidden>
+                            ";
+        // line 20
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "idUsuario", array()), 'widget');
         echo "</p>
                             <br>
                             <button type=\"submit\" class=\"btn-blue width-50\" >Guardar</button>
                              <br>
                     ";
-        // line 22
+        // line 24
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
     \t\t</div>
@@ -98,6 +106,6 @@ class __TwigTemplate_a60605ca902dd0e141784e1f6e959168458063acb60b19ef77e22652daf
 
     public function getDebugInfo()
     {
-        return array (  80 => 22,  73 => 18,  68 => 16,  64 => 15,  60 => 14,  56 => 13,  52 => 12,  48 => 11,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  88 => 24,  81 => 20,  76 => 18,  72 => 17,  68 => 16,  64 => 15,  60 => 14,  56 => 13,  52 => 12,  48 => 11,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

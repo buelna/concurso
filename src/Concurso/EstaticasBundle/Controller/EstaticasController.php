@@ -33,7 +33,7 @@ class EstaticasController extends Controller
             
             $dql = $em->createQueryBuilder();
  
-            $dql->select('Equipo.nombre','Equipo.id','Equipo.preparatoria')
+            $dql->select('Equipo.nombre','Equipo.id','Equipo.preparatoria','Equipo.lenguaje')
                 ->from('RegistroBundle:Equipo', 'Equipo')
                 ->where('Equipo.idUsuario = :id_Usuario' );
             $dql->setParameter('id_Usuario', $idUsuario);

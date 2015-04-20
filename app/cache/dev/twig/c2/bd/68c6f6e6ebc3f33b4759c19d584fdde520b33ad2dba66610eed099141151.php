@@ -44,11 +44,11 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
 \t</div>
 \t<div class=\"row\">
         <div class=\"large-2 columns\">
-            <strong>8:00-9:00hrs.</strong><br/>
+            <strong>8:00-8:30hrs.</strong><br/>
         </div>
         <div class=\"large-10 columns\">
-        \t<p>Registro de participantes<br/>
-\t\t\tLugar: Lobby del edificio “G”.</p>
+        \t<p>Inscripción de participantes<br/>
+\t\t\tLugar: Sala audiovisual edificio “U” planta baja.</p>
 \t\t\t<hr>
         </div>
   \t</div>
@@ -58,7 +58,7 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
         </div>
         <div class=\"large-10 columns\">
         \t<p>Ceremonia de inauguración<br/>
-\t\t\tLugar: Lobby del edificio “G”.</p>
+\t\t\tLugar: Sala audiovisual edificio “U” planta baja.</p>
 \t\t\t<hr>
         </div>
   \t</div>
@@ -74,11 +74,11 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
   \t</div>
 \t<div class=\"row\">
         <div class=\"large-2 columns\">
-            <strong>13:00hrs.</strong><br/>
+            <strong>12:30hrs.</strong><br/>
         </div>
         <div class=\"large-10 columns\">
         \t<p>Premiación y Clausura<br/>
-\t\t\tugar: Sala audiovisual del edificio “D”.</p>
+\t\t\tLugar: Sala audiovisual del edificio “D”.</p>
 \t\t\t<hr>
         </div>
   \t</div>

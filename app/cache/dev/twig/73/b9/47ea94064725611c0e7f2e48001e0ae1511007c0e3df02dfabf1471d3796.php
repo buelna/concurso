@@ -61,13 +61,20 @@ class __TwigTemplate_73b947ea94064725611c0e7f2e48001e0ae1511007c0e3df02dfabf1471
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "preparatoria", array()), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <th>Lenguaje</th>
+                <td>";
+        // line 22
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "lenguaje", array()), "html", null, true);
+        echo "</td>
+            </tr>
         </tbody>
     </table>
 
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 25
+        // line 29
         echo $this->env->getExtension('routing')->getPath("equipo");
         echo "\">
             Back to the list
@@ -75,14 +82,14 @@ class __TwigTemplate_73b947ea94064725611c0e7f2e48001e0ae1511007c0e3df02dfabf1471
     </li>
     <li>
         <a href=\"";
-        // line 30
+        // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("equipo_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 34
+        // line 38
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -101,6 +108,6 @@ class __TwigTemplate_73b947ea94064725611c0e7f2e48001e0ae1511007c0e3df02dfabf1471
 
     public function getDebugInfo()
     {
-        return array (  86 => 34,  79 => 30,  71 => 25,  61 => 18,  54 => 14,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  93 => 38,  86 => 34,  78 => 29,  68 => 22,  61 => 18,  54 => 14,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

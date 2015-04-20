@@ -18,6 +18,8 @@
 							<dd>{{ equipo.nombre }}</br></br></dd>
 							<dt>Preparatoria de procedencia:</dt>
 							<dd>{{ equipo.preparatoria }} </br></br></dd>
+							<dt>Lenguaje de programación:</dt>
+							<dd>{{ equipo.lenguaje }} </br></br></dd>
 						</dl>
 						<a href="{{ path('equipo_delete', { 'id': equipo.id }) }}" class="btn btn-red">Eliminar equipo</a>
 						<a href="{{ path('equipo_edit', { 'id': equipo.id }) }}" class="btn btn-blue">Editar equipo</a>

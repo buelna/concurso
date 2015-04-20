@@ -13,7 +13,9 @@
                     {{ form_widget(form.nombre) }}
                     {{ form_label(form.preparatoria, 'Preparatoria de procedencia') }}
                     {{ form_widget(form.preparatoria) }}
-                    <br>
+                    {{ form_label(form.lenguaje, 'Lenguaje de programación') }}
+                    {{ form_widget(form.lenguaje) }}
+                    <br><br>
                     <p hidden>{{ form_widget(form.idUsuario) }}</p>
                     <button type="submit" class="btn-blue width-50" >Guardar</button>
                      <br>

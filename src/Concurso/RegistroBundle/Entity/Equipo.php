@@ -42,6 +42,13 @@ class Equipo
     private $preparatoria;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="lenguaje", type="string", length=45)
+     */
+    private $lenguaje;
+
+    /**
      * @var integer
      *
      * @ORM\ManyToOne(targetEntity="Concurso\RegistroBundle\Entity\Usuario")
@@ -104,6 +111,29 @@ class Equipo
     public function getPreparatoria()
     {
         return $this->preparatoria;
+    }
+
+    /**
+     * Set Lenguaje
+     *
+     * @param string $lenguaje
+     * @return Equipo
+     */
+    public function setLenguaje($lenguaje)
+    {
+        $this->lenguaje = $lenguaje;
+
+        return $this;
+    }
+
+    /**
+     * Get Lenguaje
+     *
+     * @return string 
+     */
+    public function getLenguaje()
+    {
+        return $this->lenguaje;
     }
 
     /**

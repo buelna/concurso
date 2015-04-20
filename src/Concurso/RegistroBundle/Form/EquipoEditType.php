@@ -18,6 +18,17 @@ class EquipoEditType extends AbstractType
         $builder
             ->add('nombre')
             ->add('preparatoria')
+            ->add('lenguaje', 'choice', array(
+                'choices' => array(
+                    'Java' => 'Java',
+                    'Visual C/C++' => 'Visual C/C++',
+                    'Visual Basic' => 'Visual Basic',
+                    'C#' => 'C#',
+                ),
+                'required'    => true,
+                'placeholder' => 'Elige el lenguaje de programación',
+                'empty_data'  => null
+            ))
             ->add('idUsuario')
             
         ;

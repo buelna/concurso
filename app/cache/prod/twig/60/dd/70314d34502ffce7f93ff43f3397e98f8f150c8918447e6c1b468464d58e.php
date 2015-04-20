@@ -66,15 +66,23 @@ class __TwigTemplate_60dd70314d34502ffce7f93ff43f3397e98f8f150c8918447e6c1b46846
         // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "preparatoria", array()), 'widget');
         echo "
+                    ";
+        // line 16
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "lenguaje", array()), 'label', array("label" => "Lenguaje de programacíon"));
+        echo "
+                    ";
+        // line 17
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "lenguaje", array()), 'widget');
+        echo "
                     <br>
                     <p hidden>";
-        // line 17
+        // line 19
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "idUsuario", array()), 'widget');
         echo "</p>
                     <button type=\"submit\" class=\"btn-blue width-50\" >Guardar</button>
                      <br>
                 ";
-        // line 20
+        // line 22
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form_end');
         echo "
     \t\t</div>
@@ -97,6 +105,6 @@ class __TwigTemplate_60dd70314d34502ffce7f93ff43f3397e98f8f150c8918447e6c1b46846
 
     public function getDebugInfo()
     {
-        return array (  78 => 20,  72 => 17,  67 => 15,  63 => 14,  59 => 13,  55 => 12,  51 => 11,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  86 => 22,  80 => 19,  75 => 17,  71 => 16,  67 => 15,  63 => 14,  59 => 13,  55 => 12,  51 => 11,  47 => 10,  39 => 4,  36 => 3,  11 => 1,);
     }
 }
