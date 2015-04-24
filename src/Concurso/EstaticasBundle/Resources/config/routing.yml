@@ -17,6 +17,9 @@ ejemplos:
 registro:
     pattern:  /registro
     defaults: { _controller: ConcursoEstaticasBundle:Estaticas:registro }
+galeria:
+    pattern:  /galeria
+    defaults: { _controller: ConcursoEstaticasBundle:Estaticas:galeria }
 contactos:
     pattern:  /contactos/
     defaults: { _controller: ConcursoEstaticasBundle:Estaticas:contactos }

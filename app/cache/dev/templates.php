@@ -83,6 +83,7 @@
   'ConcursoEstaticasBundle:Default:dump.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/dump.html.twig',
   'ConcursoEstaticasBundle:Default:login.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/login.html.twig',
   'ConcursoEstaticasBundle:Default:registro.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/registro.html.twig',
+  'ConcursoEstaticasBundle:Default:galeria.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/galeria.html.twig',
   'ConcursoEstaticasBundle:Default:index.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/index.html.twig',
   'ConcursoEstaticasBundle:Default:programa.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/programa.html.twig',
   'ConcursoEstaticasBundle:Default:nuevoUsuario.html.twig' => '/var/www/concurso/src/Concurso/EstaticasBundle/Resources/views/Default/nuevoUsuario.html.twig',

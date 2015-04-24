@@ -4,7 +4,7 @@ namespace Concurso\EstaticasBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\HttpFoundation\Response;
 class EstaticasController extends Controller
 {
     public function indexAction()
@@ -28,20 +28,13 @@ class EstaticasController extends Controller
         
             $usuario = $this->get('security.context')->getToken()->getUser();
             $idUsuario=$usuario->getId();
-            
             $em = $this->getDoctrine()->getManager();
-            
             $dql = $em->createQueryBuilder();
- 
             $dql->select('Equipo.nombre','Equipo.id','Equipo.preparatoria','Equipo.lenguaje')
                 ->from('RegistroBundle:Equipo', 'Equipo')
                 ->where('Equipo.idUsuario = :id_Usuario' );
             $dql->setParameter('id_Usuario', $idUsuario);
-
             $equipo=$dql->getQuery()->getResult();
-
-            
-            
             $query = $em->createQuery(
                 'SELECT p
                 FROM RegistroBundle:Alumno p
@@ -49,15 +42,29 @@ class EstaticasController extends Controller
             )->setParameter('id_Usuario', $idUsuario);
 
             $alumnos = $query->getResult();
-
-            
-            
             return $this->render('ConcursoEstaticasBundle:Default:registro.html.twig', array(
                     'usuario' => $usuario,
                     'equipos' => $equipo,
                     'alumnos' => $alumnos
                 ));
-        
+    }
+    public function galeriaAction()
+    {
+        $lista=array();
+        if ($handle = opendir('imagenes/album01/')) 
+        {
+            $i=0;
+            while (false !== ($entry = readdir($handle))) 
+            {
+                if ($entry != "." && $entry != "..")
+                {
+                    $lista[$i]="imagenes/album01/".$entry;
+                    $i = $i + 1;
+                }
+            }
+            closedir($handle);
+        }
+        return $this->render('ConcursoEstaticasBundle:Default:galeria.html.twig', array('lista' => $lista));
     }
     public function contactosAction()
     {
