@@ -143,6 +143,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::registroAction',  '_route' => 'registro',);
         }
 
+        // galeria
+        if ($pathinfo === '/galeria') {
+            return array (  '_controller' => 'Concurso\\EstaticasBundle\\Controller\\EstaticasController::galeriaAction',  '_route' => 'galeria',);
+        }
+
         // contactos
         if (rtrim($pathinfo, '/') === '/contactos') {
             if (substr($pathinfo, -1) !== '/') {

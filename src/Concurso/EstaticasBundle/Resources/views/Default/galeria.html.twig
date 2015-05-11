@@ -1,10 +1,39 @@
 {% extends '::base.html.twig' %}
 {% block content %}
 	<div class="row">
-		<div class="large-12 columns" align="center">
-		{% for dir in lista %}
-			<img src='{{asset(dir)}}' >
-		{% endfor %}
+	<section  class="section_light">
+		<div class="row"><br>
+			<div class="orbit-container">
+				<ul class="example-orbit" data-orbit >
+				{% for lista in listas %}
+					{% for dir in lista %}
+						<li>
+							<img src='{{asset(dir)}}' >
+							<!-- <div class="orbit-caption">
+				                Caption One.
+				            </div>-->
+						</li>
+					{% endfor %}
+				{% endfor %}
+				</ul>
+			</div>
 		</div>
+	</section>
+		{#{% for lista in listas %}
+					{% set i = 0 %}
+					{% for dir in lista %}
+						{% if i == 0 %}
+							<div class="large-6 columns">
+								<img src='{{asset(dir)}}' >
+							</div>
+						{% set i = 1%}
+						{% else %}
+							<div class="large-6 columns">
+								<img src='{{asset(dir)}}' >
+							</div>
+						{% set i = 0 %}
+						{% endif %}
+					{% endfor %}
+				{% endfor %}#}
 	</div>
 {% endblock %}

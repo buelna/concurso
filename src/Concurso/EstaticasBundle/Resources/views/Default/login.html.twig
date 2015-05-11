@@ -2,20 +2,22 @@
 {% block content %}
 	<div class="row">
 		<div class="large_12 columns">
-			<h1 align="center">Instrucciones para pre-registar el equipo</h1>
-			<p>
+			{#<h1 align="center">Instrucciones para pre-registrar el equipo</h1>#}
+			<h1 align="center">Registro suspendido hasta nuevo aviso</h1>
+			{#<p>
 			1.- Crear un nuevo usuario en la plataforma (un usuario por equipo).<br>
 			2.- Ingresar al sistema con tu correo electronico como usuario y tu contraseña.<br>
 			3.- Crear el equipo, asignar un nombre de equipo y la preparatoria de procedencia.<br>
 			4.- Agregar los tres alumnos que integraran el equipo.<br>
-			</p>
+			</p>#}
+			
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-12 columns" align="center">
 			<div class="large-6 columns">
 				</br>
-				<h1>Inicio de sesi&oacuten</h1>
+				{#<h1>Inicio de sesi&oacuten</h1>
 				{% if error %}
 				    <div>{{ error.message }}</div>
 				{% endif %}
@@ -28,7 +30,7 @@
 				    
 
 				    <button type="submit" class="btn-blue width-100">Iniciar sesi&oacuten</button>
-				</form>
+				</form>#}
 			</div>
 			<div class="large-6 columns" align="center">
 				<div class="row">
@@ -37,7 +39,7 @@
 		          <hr>
 				</div>
 				<div class="row">
-					<a href="{{ path('usuario_new') }}" class="button expand">Reg&iacutestrate</a>
+					{#<a href="{{ path('usuario_new') }}" class="button expand">Reg&iacutestrate</a>#}
 				</div>
 			</div>
 

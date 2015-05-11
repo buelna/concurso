@@ -51,20 +51,32 @@ class EstaticasController extends Controller
     public function galeriaAction()
     {
         $lista=array();
-        if ($handle = opendir('imagenes/album01/')) 
+        if ($handle = opendir('imagenes/albumes/')) 
         {
-            $i=0;
-            while (false !== ($entry = readdir($handle))) 
+            $j=0;
+            while(false !== ($folder = readdir($handle)))
             {
-                if ($entry != "." && $entry != "..")
+                if ($folder != "." && $folder != "..")
                 {
-                    $lista[$i]="imagenes/album01/".$entry;
-                    $i = $i + 1;
+                    if ($handle1 = opendir('imagenes/albumes/'.$folder.'/')) 
+                    {
+                        $i=0;
+                        while (false !== ($entry = readdir($handle1))) 
+                        {
+                            if ($entry != "." && $entry != "..")
+                            {
+                                $lista[$j][$i]="imagenes/albumes/".$folder.'/'.$entry;
+                                $i = $i + 1;
+                            }
+                        }
+                        closedir($handle1);
+                        $j = $j + 1;
+                    }
                 }
             }
             closedir($handle);
         }
-        return $this->render('ConcursoEstaticasBundle:Default:galeria.html.twig', array('lista' => $lista));
+        return $this->render('ConcursoEstaticasBundle:Default:galeria.html.twig', array('listas' => $lista));
     }
     public function contactosAction()
     {

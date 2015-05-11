@@ -44,7 +44,7 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
 \t</div>
 \t<div class=\"row\">
         <div class=\"large-2 columns\">
-            <strong>8:00-8:30hrs.</strong><br/>
+            <strong>8:00-8:25hrs.</strong><br/>
         </div>
         <div class=\"large-10 columns\">
         \t<p>Inscripción de participantes<br/>
@@ -54,7 +54,7 @@ class __TwigTemplate_c2bd68c6f6e6ebc3f33b4759c19d584fdde520b33ad2dba66610eed0991
   \t</div>
 \t<div class=\"row\">
         <div class=\"large-2 columns\">
-            <strong>8:45hrs.</strong><br/>
+            <strong>8:30hrs.</strong><br/>
         </div>
         <div class=\"large-10 columns\">
         \t<p>Ceremonia de inauguración<br/>

@@ -68,13 +68,13 @@ class __TwigTemplate_60dd70314d34502ffce7f93ff43f3397e98f8f150c8918447e6c1b46846
         echo "
                     ";
         // line 16
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "lenguaje", array()), 'label', array("label" => "Lenguaje de programacíon"));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "lenguaje", array()), 'label', array("label" => "Lenguaje de programación"));
         echo "
                     ";
         // line 17
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "lenguaje", array()), 'widget');
         echo "
-                    <br>
+                    <br><br>
                     <p hidden>";
         // line 19
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "idUsuario", array()), 'widget');
